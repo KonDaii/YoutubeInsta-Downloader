@@ -6,7 +6,9 @@ Python script to download YouTube video/audio using pytube external library. Add
 
 Ver 1.0 - Nov 18, 2023
 - YouTube video and audio only downloads working
+- Created seperate module for YouTube functions
 
 Next Steps:
-- Create seperate module for YouTube functions
-- Add instagram download function
+- Add Instagram download function module
+- Add Twitter download function module
+- Create desktop application with GUI
