@@ -1,29 +1,28 @@
-from instascrape import Reel
-import time
+# instagramModule.py
+import instaloader
 
-def downloadReel(link):
-    # session id
-    sessionID = '1987763607%3AwpycPlvX2mdLxo%3A20%3AAYeMRylgU5Jg58JkEaciqldbhhhsGrw_37qiK3aCFWk'
-    reelLink = link
 
-    # Header with session id
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)\
-        AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.74 \
-        Safari/537.36 Edg/79.0.309.43",
-        "cookie": f'sessionid={sessionID};'
-    }
+def downloadReel(instagram_url):
+    try:
+        # Create an Instaloader instance
+        loader = instaloader.Instaloader()
 
-    # Passing Instagram reel link as argument in Reel Module
-    insta_reel = Reel(
-        reelLink)
+        # Get the Instagram post details
+        post = instaloader.Post.from_shortcode(loader.context, instagram_url.split("/")[-2])
 
-    # Using  scrape function and passing the headers
-    insta_reel.scrape(headers=headers)
+        # Download the reel
+        loader.download_post(post, target='reels')
 
-    # Giving path where we want to download reel to the
-    # download function
-    insta_reel.download(fp=f".\\Desktop\\reel{int(time.time())}.mp4")
+        print("Reel downloaded successfully.")
+    except instaloader.exceptions.InstaloaderException as e:
+        print(f"Error: {e}")
 
-    # printing success Message
-    print('Downloaded Successfully.')
+
+if __name__ == "__main__":
+    # You can test the module by running it as a script
+    link = input("Enter the Instagram reel URL: ")
+    if "instagram.com" in link:
+        downloadReel(link)
+    else:
+        print("The link is not an Instagram reel link.")
+
