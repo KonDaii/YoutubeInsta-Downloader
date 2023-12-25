@@ -11,9 +11,9 @@ def downloadReel(instagram_url):
         post = instaloader.Post.from_shortcode(loader.context, instagram_url.split("/")[-2])
 
         # Download the reel
-        loader.download_post(post, target='reels')
+        loader.download_post(post, target='instagramReels')
 
-        print("Reel downloaded successfully.")
+        print("Instagram reel has downloaded successfully.")
     except instaloader.exceptions.InstaloaderException as e:
         print(f"Error: {e}")
 
