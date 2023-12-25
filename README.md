@@ -9,8 +9,9 @@ Ver 1.0 - Nov 18, 2023
 
 Ver 1.1 - Dec 23, 2023
 - Instagram reel download functionality added (instagramModule)
+- Added new download directories for Youtube audio/video downloads
 
 Next Steps:
-- Progress bar + unified download folder
+- Progress bar
 - Add Twitter download function module
 - Create desktop application with GUI
