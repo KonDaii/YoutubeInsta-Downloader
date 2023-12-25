@@ -18,11 +18,4 @@ def downloadReel(instagram_url):
         print(f"Error: {e}")
 
 
-if __name__ == "__main__":
-    # You can test the module by running it as a script
-    link = input("Enter the Instagram reel URL: ")
-    if "instagram.com" in link:
-        downloadReel(link)
-    else:
-        print("The link is not an Instagram reel link.")
 
