@@ -1,21 +1,12 @@
 from pytube import YouTube
-<<<<<<< Updated upstream
-=======
 import os
 from tkinter import Toplevel, Label
 
 
->>>>>>> Stashed changes
 def DownloadYoutubeVideo(link):
     youtubeVideo = YouTube(link)
     video = youtubeVideo.streams.get_highest_resolution()
     try:
-<<<<<<< Updated upstream
-        video.download()
-    except:
-        print("An error has occurred")
-    print("Video download is completed successfully")
-=======
         # Create a folder if it doesn't exist
         folder_path = 'YoutubeVideo'
         os.makedirs(folder_path, exist_ok=True)
@@ -27,19 +18,12 @@ def DownloadYoutubeVideo(link):
     else:
         print("Youtube video download has completed successfully")
         show_download_complete_window("Youtube Video Download Complete")
->>>>>>> Stashed changes
 
 
 def DownloadYoutubeAudio(link):
     youtubeAudio = YouTube(link)
     audio = youtubeAudio.streams.get_audio_only()
     try:
-<<<<<<< Updated upstream
-        audio.download()
-    except:
-        print("An error has occurred")
-    print("Audio download is completed successfully")
-=======
         # Create a folder if it doesn't exist
         folder_path = 'YoutubeAudio'
         os.makedirs(folder_path, exist_ok=True)
@@ -58,4 +42,3 @@ def show_download_complete_window(message):
     window.title("Download Complete")
     label = Label(window, text=message)
     label.pack()
->>>>>>> Stashed changes
