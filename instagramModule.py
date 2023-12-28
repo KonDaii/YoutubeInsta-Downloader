@@ -12,8 +12,7 @@ def downloadReel(instagram_url):
 
         # Download the reel
         loader.download_post(post, target='instagramReels')
-        print("Instagram reel has downloaded successfully.")
-        show_download_complete_window("Instagram Reel Download Complete")
+        show_download_complete_window("Instagram Reel Download Complete. You can now close this window.")
     except instaloader.exceptions.InstaloaderException as e:
         print(f"Error: {e}")
 

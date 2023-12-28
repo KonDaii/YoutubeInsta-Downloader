@@ -24,7 +24,7 @@ def download_video_or_audio():
     elif "instagram.com" in link:
         instagramModule.downloadReel(link)
     else:
-        lbl.configure(text="The link is not a YouTube/Instagram link")
+        lbl.configure(text="The link is not a YouTube/Instagram link. Try again.")
 
 
 # create root window

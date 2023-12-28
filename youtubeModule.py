@@ -16,8 +16,7 @@ def DownloadYoutubeVideo(link):
     except Exception as e:
         print(f"An error has occurred: {e}")
     else:
-        print("Youtube video download has completed successfully")
-        show_download_complete_window("Youtube Video Download Complete")
+        show_download_complete_window("Youtube Video Download Complete. You can now close this window.")
 
 
 def DownloadYoutubeAudio(link):
@@ -33,8 +32,7 @@ def DownloadYoutubeAudio(link):
     except Exception as e:
         print(f"An error has occurred: {e}")
     else:
-        print("Youtube audio download has completed successfully")
-        show_download_complete_window("Youtube Audio Download Complete")
+        show_download_complete_window("Youtube Audio Download Complete. You can now close this window.")
 
 
 def show_download_complete_window(message):
