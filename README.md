@@ -11,7 +11,10 @@ Ver 1.1 - Dec 23, 2023
 - Instagram reel download functionality added (instagramModule)
 - Added new download directories for Youtube audio/video downloads
 
+Ver 1.2 - Dec 27, 2023
+- A basic GUI using tkinter has been added. Will revamp in a later update
+  
 Next Steps:
 - Progress bar
 - Add Twitter download function module
-- Create desktop application with GUI
+- Change into desktop application with GUI
