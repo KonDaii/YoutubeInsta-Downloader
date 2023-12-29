@@ -13,8 +13,9 @@ Ver 1.1 - Dec 23, 2023
 
 Ver 1.2 - Dec 27, 2023
 - A basic GUI using tkinter has been added. Will revamp in a later update
+- Exception handling added for unavailable Youtube/Instagram links
   
 Next Steps:
 - Progress bar
 - Add Twitter download function module
-- Change into desktop application with GUI
+- Create desktop application with GUI
