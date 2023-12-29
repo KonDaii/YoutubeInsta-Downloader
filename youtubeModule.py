@@ -18,7 +18,6 @@ def DownloadYoutubeVideo(link):
     except Exception as e:
         show_error_window(f"Video is unavailable. Double check your link and try again.")
     else:
-        print("Youtube video download has completed successfully")
         show_download_complete_window("Youtube Video Download Complete")
 
 
@@ -37,7 +36,7 @@ def DownloadYoutubeAudio(link):
     except Exception as e:
         show_error_window(f"Audio is unavailable. Double check your link and try again.")
     else:
-        print("Youtube audio download has completed successfully")
+
         show_download_complete_window("Youtube Audio Download Complete")
 
 
