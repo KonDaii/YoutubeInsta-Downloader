@@ -3,7 +3,7 @@ import os
 from tkinter import Toplevel, Label
 
 
-def DownloadYoutubeVideo(link):
+def downloadYoutubeVideo(link):
     try:
         youtubeVideo = YouTube(link)
         video = youtubeVideo.streams.get_highest_resolution()
@@ -21,7 +21,7 @@ def DownloadYoutubeVideo(link):
         show_download_complete_window("Youtube Video Download Complete")
 
 
-def DownloadYoutubeAudio(link):
+def downloadYoutubeAudio(link):
     try:
         youtubeAudio = YouTube(link)
         audio = youtubeAudio.streams.get_audio_only()
