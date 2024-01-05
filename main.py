@@ -7,6 +7,7 @@ from tkinter import *
 from tkinter import simpledialog
 
 import instagramModule
+import twitterModule
 import youtubeModule
 
 
@@ -16,15 +17,17 @@ def download_video_or_audio():
         video_or_audio = simpledialog.askstring("Input",
                                                 "Do you want video or audio only? (Enter 'video' or 'audio')").lower()
         if video_or_audio == "video":
-            youtubeModule.DownloadYoutubeVideo(link)
+            youtubeModule.downloadYoutubeVideo(link)
         elif video_or_audio == "audio":
-            youtubeModule.DownloadYoutubeAudio(link)
+            youtubeModule.downloadYoutubeAudio(link)
         else:
             lbl.configure(text="Please select either video or audio.")
     elif "instagram.com" in link:
         instagramModule.downloadReel(link)
+    elif "x.com" in link or "twitter.com" in link:
+        twitterModule.downloadTwitterVid(link)
     else:
-        lbl.configure(text="The link is not a YouTube/Instagram link. Try again.")
+        lbl.configure(text="The link is not a YouTube/Instagram/X link. Try again.")
 
 
 # create root window
