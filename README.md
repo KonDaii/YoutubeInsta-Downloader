@@ -14,7 +14,12 @@ Ver 1.1 - Dec 23, 2023
 Ver 1.2 - Dec 27, 2023
 - A basic GUI using tkinter has been added. Will revamp in a later update
 - Exception handling added for unavailable Youtube/Instagram links
-  
+
+Ver 1.3 - Jan 14, 2023
+- Revamped GUI
+- Download directory selection added (Functional for Youtube only for now)
+- Added placeholder file for TwitterModule
+
 Next Steps:
 - Progress bar
 - Add Twitter download function module
