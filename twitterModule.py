@@ -22,12 +22,12 @@ def downloadTwitterVid(link):
 def show_download_complete_window(message):
     window = Toplevel()
     window.title("Download Complete")
-    label = Label(window, text=message)
+    label = Label(window, text=message, bg="forest green")
     label.pack()
 
 
 def show_error_window(error_message):
     window = Toplevel()
     window.title("Error")
-    label = Label(window, text=error_message)
+    label = Label(window, text=error_message, bg="red")
     label.pack()
